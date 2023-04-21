@@ -24,13 +24,18 @@ const Search = () => {
   const handleKey = (e) => {
     e.code === "Enter" && handleSearch();
   };
+
+  const handleSelect = ()=>{
+    //check whether the group(chats in firestore) exists, if not create
+
+  }
   return (
     <div className='search'>
       <div className="searchForm">
         <input type="text" placeholder='Search for a user' onKeyDown={handleKey} onChange={(e)=>setUsername(e.target.value)}/>
       </div>
       {err && <span>Oops!, user not found!</span>}
-      {user && <div className="userChat">
+      {user && <div className="userChat" onClick={handleSelect}>
         <img src={user.photoURL} alt="" />
         <div className="userInfo">
           <span>{user.displayName}</span>

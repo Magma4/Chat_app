@@ -7,7 +7,7 @@ const Navbar = () => {
   const {currentUser} = useContext(AuthContext)
   return (
     <div className='navbar'>
-      <span className='logo'>FaxTel</span>
+      <span className='logo'>Samaritan</span>
       <div className='user'>
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>

@@ -22,13 +22,13 @@ const Login = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">Lama Chat</span>
+        <span className="logo">Samaritan Chat</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
           <input type="password" placeholder="password" />
-          <button>Sign in</button>
-          {err && <span>Something went wrong</span>}
+          <button>Login</button>
+          {err && <span>Invalid credentials</span>}
         </form>
         <p>Don't have an account? <Link to="/register">Register</Link></p>
       </div>

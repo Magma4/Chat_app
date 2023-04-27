@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import Add from "../img/add.png";
-import Video from "../img/video.png";
+// import Add from "../img/add.png";
+// import Video from "../img/video.png";
 import More from "../img/more.png";
 import Messages from "./Messages";
 import Input from "./Input";
@@ -14,8 +14,8 @@ const Chat = () => {
       <div className="chatInfo">
         <span>{data.user?.displayName}</span>
         <div className="chatIcons">
-          <img src={Video} alt="" />
-          <img src={Add} alt="" />
+          {/* <img src={Video} alt="" />
+          <img src={Add} alt="" /> */}
           <img src={More} alt="" />
         </div>
       </div>

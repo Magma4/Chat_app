@@ -19,7 +19,7 @@
 
 
 .formContainer{
-    background-color: #393939;
+    background-color: #ffdad9;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -37,6 +37,7 @@
         .logo{
             color: #351044;
             font-weight: bold;
+            font-family: v;
             font-size: 24px;
             @include tablet{
                 display: none;
@@ -57,15 +58,15 @@
                 padding: 15px;
                 border: none;
                 width: 250px;
-                border-bottom: 1px solid #351044;
+                border-bottom: 2px solid #f6e4e3;
             &::placeholder{
                 color: rgb(175,175,175);
             }
             }
 
             button{
-                background-color: #351044;
-                color: white;
+                background-color: #f6e4e3;
+                color: black;
                 padding: 10px;
                 font-weight: bold;
                 border: none;
@@ -79,7 +80,6 @@
                 align-items: center;
                 gap: 10px;
                 color: #351044;
-
             }
         }
 
@@ -92,14 +92,14 @@
 }
 
 .home{
-    background-color: #393939;
+    background-color: #ffdad9;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .container{
-        border: 1px solid black;
+        border: 2px solid #f6e4e3;
         border-radius: 10px;
         width: 65%;
         height: 80%;
@@ -111,17 +111,17 @@
         .sidebar{
             flex: 1;
 
-            background-color: #a15dbe;
+            background-color: #fff1ee;
             position: relative;
 
             .navbar{
                 display: flex;
                 align-items: center;
-                background-color: #351044;
+                background-color: #cdbcbc;
                 height: 50px;
                 padding: 10px;
                 justify-content: space-between;
-                color: #ddddf7;
+                color: black;
 
                 .logo{
                     font-weight: bold;
@@ -143,8 +143,8 @@
                     }
 
                     button{
-                        background-color: #601c7a;
-                        color: #ddddf7;
+                        background-color: #7c6c6c;
+                        color: black;
                         font-size: 13px;
                         border: none;
                         cursor: pointer;
@@ -164,13 +164,13 @@
                 .searchForm{
 
                     input{
-                        background-color: transparent;
+                        background-color: #fefeff;
                         border: none;
-                        color: #ddddf7;
+                        color: black;
                         outline: none;
 
                         &::placeholder{
-                            color: #ddddf7;
+                            color: black;
 
                         }
                     }
@@ -182,10 +182,10 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: white;
+                color: black;
 
                 &:hover{
-                    background-color: #351044;
+                    background-color: #7c6c6c;
 
                 }
 
@@ -204,7 +204,7 @@
 
                     p{
                         font-size: 14px;
-                        color: #ddddf7;
+                        color: black;
                     }
                 }
             }
@@ -212,15 +212,16 @@
         }
         .chat{
             flex: 2;
+            
         
             .chatInfo{
                 height: 50px;
-                background-color: #a15dbe;
+                background-color: #fff1ee;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
-                color: #ddddf7;
+                color: black;
             }
 
             .chatIcons{
@@ -234,7 +235,7 @@
             }
 
             .messages{
-                background-color: #ddddf7;
+                background-color: whitesmoke;
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
@@ -282,8 +283,8 @@
                             align-items: flex-end;
 
                             p{
-                                background-color: #a15dbe;
-                                color: white;
+                                background-color: #a69393;
+                                color: black;
                                 border-radius: 10px 0px 10px 10px;
                             }
                         }
@@ -325,8 +326,8 @@
                     button{
                         border: none;
                         padding: 10px 15px;
-                        color: white;
-                        background-color: #a15dbe;
+                        color: black;
+                        background-color: #a69393;
                         cursor: pointer;
                     }
                 }

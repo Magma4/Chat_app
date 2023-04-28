@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import { format } from "date-fns";
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
@@ -11,6 +12,8 @@ const Message = ({ message }) => {
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
+
+  const sentAt = message.date && format(new Date(message.date.seconds * 1000), 'HH:mm');
 
   return (
     <div
@@ -26,7 +29,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        <span>{sentAt}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>

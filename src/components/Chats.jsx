@@ -36,9 +36,13 @@ const Chats = () => {
           key={chat[0]}
           onClick={() => handleSelect(chat[1].userInfo)}
         >
-          <img src={chat[1].userInfo?.photoURL} alt="" />
+          <img
+            src={chat[1].userInfo?.photoURL}
+            alt=""
+            onClick={() => window.open(chat[1].userInfo?.photoURL, "_blank")}
+          />
           <div className="userChatInfo">
-            <span>{chat[1].userInfo?.displayName}</span>
+            <span>{chat[1].userInfo?.displayName?.charAt(0).toUpperCase() + chat[1].userInfo?.displayName?.slice(1)}</span>
             <p>{chat[1].lastMessage?.text}</p>
           </div>
         </div>

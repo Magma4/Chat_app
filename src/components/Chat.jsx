@@ -9,10 +9,13 @@ import { ChatContext } from "../context/ChatContext";
 const Chat = () => {
   const { data } = useContext(ChatContext);
 
+  const displayName = data.user?.displayName;
+  const capitalizedDisplayName = displayName ? displayName.charAt(0).toUpperCase() + displayName.slice(1) : "";
+
   return (
     <div className="chat">
       <div className="chatInfo">
-        <span>{data.user?.displayName}</span>
+        <span>{capitalizedDisplayName}</span>
         <div className="chatIcons">
           {/* <img src={Video} alt="" />
           <img src={Add} alt="" /> */}
@@ -22,7 +25,7 @@ const Chat = () => {
       <Messages />
       <Input />
     </div>
-  )
-}
+  );
+};
 
-export default Chat
+export default Chat;

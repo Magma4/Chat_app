@@ -74,8 +74,13 @@ const Search = () => {
     } catch (err) {}
 
     setUser(null);
-    setUsername("")
+    setUsername("");
   };
+
+  const handleOpenImage = () => {
+    window.open(user.photoURL, "_blank");
+  };
+
   return (
     <div className="search">
       <div className="searchForm">
@@ -90,9 +95,9 @@ const Search = () => {
       {err && <span>User not found!</span>}
       {user && (
         <div className="userChat" onClick={handleSelect}>
-          <img src={user.photoURL} alt="" />
+          <img src={user.photoURL} alt="" onClick={handleOpenImage} />
           <div className="userChatInfo">
-            <span>{user.displayName}</span>
+            <span>{user.displayName} </span>
           </div>
         </div>
       )}

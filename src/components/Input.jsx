@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import Attach from "../img/attach.png";
 import Photo from "../img/photo.png";
+import Emoji from "../img/emoji.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import {
@@ -81,16 +82,24 @@ const Input = () => {
     setImg(null);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      handleSend();
+    }
+  };
+
   return (
     <div className="input">
       <input
         type="text"
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
+        onKeyDown={handleKeyDown}
         value={text}
       />
       <div className="send">
         {/* <img src={Attach} alt="" /> */}
+        <img src={Emoji} alt="Emoji" className="emoji-button" />
         <input
           type="file"
           style={{ display: "none" }}
@@ -101,6 +110,7 @@ const Input = () => {
           <img src={Photo} alt="" />
         </label>
         <button onClick={handleSend}>Send</button>
+       
       </div>
     </div>
   );

@@ -14,6 +14,17 @@
     }
 }
 
+// Define colors
+$primary-color: #ff8c00;
+$secondary-color: #2f4f4f;
+$background-color: peachpuff;
+
+// Define border styles
+$border-style: solid;
+$border-width: 1px;
+
+// Define common styles
+$search-area-height: 40px;
 
 
 
@@ -33,11 +44,12 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        
 
         .logo{
             color: #351044;
             font-weight: bold;
-            font-family: v;
+            font-style: oblique;
             font-size: 24px;
             @include tablet{
                 display: none;
@@ -58,15 +70,15 @@
                 padding: 15px;
                 border: none;
                 width: 250px;
-                border-bottom: 2px solid #f6e4e3;
+                border-bottom: 2px solid $secondary-color;
             &::placeholder{
                 color: rgb(175,175,175);
             }
             }
 
             button{
-                background-color: #f6e4e3;
-                color: black;
+                background-color: $primary-color;
+                color: white;
                 padding: 10px;
                 font-weight: bold;
                 border: none;
@@ -111,17 +123,19 @@
         .sidebar{
             flex: 1;
 
-            background-color: #fff1ee;
+            background-color: $secondary-color;
             position: relative;
+            
 
             .navbar{
                 display: flex;
                 align-items: center;
-                background-color: #cdbcbc;
+                background-color: $primary-color;
+
                 height: 50px;
                 padding: 10px;
                 justify-content: space-between;
-                color: black;
+                color: white;
 
                 .logo{
                     font-weight: bold;
@@ -143,8 +157,8 @@
                     }
 
                     button{
-                        background-color: #7c6c6c;
-                        color: black;
+                        background-color: $secondary-color;
+                        color: white;
                         font-size: 13px;
                         border: none;
                         cursor: pointer;
@@ -164,10 +178,10 @@
                 .searchForm{
 
                     input{
-                        background-color: #fefeff;
-                        border: none;
-                        color: black;
-                        outline: none;
+                        background-color: $background-color;
+                        height: $search-area-height;
+                        padding: 10px;
+                        border: $border-width $border-style $secondary-color;
 
                         &::placeholder{
                             color: black;
@@ -182,11 +196,11 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: black;
+                color: white;
                 border-bottom: 1px solid black;
 
                 &:hover{
-                    background-color: #7c6c6c;
+                    background-color: $primary-color;
 
                 }
 
@@ -205,7 +219,7 @@
 
                     p{
                         font-size: 14px;
-                        color: black;
+                        color: white;
                     }
                 }
             }
@@ -217,12 +231,14 @@
         
             .chatInfo{
                 height: 50px;
-                background-color: #fff1ee;
+                background-color: $background-color;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
                 color: black;
+                font-weight: bolder;
+                padding: 10px;
             }
 
             .chatIcons{
@@ -236,7 +252,7 @@
             }
 
             .messages{
-                background-color: whitesmoke;
+                background-color: white;
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
@@ -260,6 +276,7 @@
                         }
                     }
                     .messageContent{
+                        
                         max-width: 80%;
                         display: flex;
                         flex-direction: column;
@@ -284,8 +301,8 @@
                             align-items: flex-end;
 
                             p{
-                                background-color: #a69393;
-                                color: black;
+                                background-color:  $secondary-color;
+                                color: white;
                                 border-radius: 10px 0px 10px 10px;
                             }
                         }
@@ -304,7 +321,8 @@
 
                 input{
                     width: 100%;
-                    border: none;
+                    border: $border-style $secondary-color;;
+                    height: 60px;
                     outline: none;
                     color: #351044;
                     font-size: 18px;
@@ -327,8 +345,8 @@
                     button{
                         border: none;
                         padding: 10px 15px;
-                        color: black;
-                        background-color: #a69393;
+                        color: white;
+                        background-color: $primary-color;
                         cursor: pointer;
                     }
                 }
